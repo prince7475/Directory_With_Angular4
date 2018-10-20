@@ -5,3 +5,11 @@
 <input [required]="myBoolean" >
 
 <button (click)="ConsoleLogMe('I like beef')">Click me</button>
+<p>------------------------------------------------------------</p>
+<!-- <br /> -->
+<h1>Two ways data binding</h1>
+<h3>{{person.name}}</h3>
+<h3>{{person.age}}</h3>
+
+<input [(ngModel)]="person.name" />
+<input [(ngModel)] = "person.age">
