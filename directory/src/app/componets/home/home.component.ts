@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,14 @@ export class HomeComponent implements OnInit {
     name: "Prince",
     age: 20
   }
+
+  // Custom Property binding 
+  // This is getting the input we passed in 
+  // for us to use @input we must import if from @angular/core
+  // next go to home.component.html to see how we use this.
+  @Input() kellem;
+  // Custom Property binding 
+
   constructor() { }
 
   ngOnInit() {
