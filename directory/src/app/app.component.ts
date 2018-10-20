@@ -18,5 +18,13 @@ export class AppComponent {
   // Custom Property binding 
 
 
-  title = 'Directory';
+
+  // @output Custom event binding 
+  // step: 2
+  // this is the fuction that will run once the onYell function in home component is actived 
+  // next step: go to the home.component.ts to see the onYell function and how we passed up the event
+  yell(e){
+    console.log('I am yelling')
+    console.log(e)
+  }
 }

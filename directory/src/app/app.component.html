@@ -8,11 +8,17 @@
   </nav>
 </header>
 
-<!-- Custom Property binding -->
+<!-- Custom Property binding @input -->
 <!-- We give it a custom name, in this case we called it kellem and gave it a value of kellem -->
 <!-- The value given is in our app.component.ts -->
 <!-- Next: go to home.component.ts to see how we receive our component -->
 
-<app-home [kellem]="kellem">Loading..</app-home>
+<!-- step 1: -->
+<!-- @output, now we want to send data up from home component to the app component -->
+<!-- onYell is the function we are listening for in the home component -->
+<!-- Once that funtion is fired we will run a function on app.component.ts called yell (lower cased)  and pass down the event given by the home component-->
+
+<!-- next steps: go to the app.components.ts to look at the yell function -->
+<app-home [kellem]="kellem" (onYell)="yell($event)">Hello there</app-home>
 
 <!-- Custom Property binding -->
