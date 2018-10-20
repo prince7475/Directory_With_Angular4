@@ -12,5 +12,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  ConsoleLogMe(val){
+    console.log(val)
+  }
 
 }
