@@ -19,6 +19,6 @@
 <!-- Once that funtion is fired we will run a function on app.component.ts called yell (lower cased)  and pass down the event given by the home component-->
 
 <!-- next steps: go to the app.components.ts to look at the yell function -->
-<app-home [kellem]="kellem" (onYell)="yell($event)">Hello there</app-home>
-
+<!-- <app-home [kellem]="kellem" (onYell)="yell($event)">Hello there</app-home> -->
+<router-outlet></router-outlet>
 <!-- Custom Property binding -->
