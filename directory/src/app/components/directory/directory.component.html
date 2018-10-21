@@ -5,10 +5,10 @@
 <ul id="ninja-listing">
   <li *ngFor="let student of students">
     <div class="single-ninja">
-      <span [ngStyle]="{background: student.favColor}">{{student.favColor}} is his favColor
+      <span [ngStyle]="{background: student.favColor}">{{student.favColor }} is his favColor
       </span>
 
-    <h3>{{student.name}}</h3>
+    <h3>{{student.name | uppercase | slice:1:3 }}</h3>
     </div>
   </li>
 </ul>
