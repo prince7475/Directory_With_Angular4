@@ -140,6 +140,6 @@ body{
     borader-radius: 2px;
     font-size: 16px;
     letter-spacing: 1px;
-    cursor: pointer;
+    cursor: pointer; 
     float: right;
   }

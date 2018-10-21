@@ -2,11 +2,22 @@
   <h1>{{title}}</h1>
   <nav>
     <ul>
-      <li>Link</li>
-      <li>Link</li>
+      <li><a [routerLink]="['/']">Home</a></li>
+      <li><a [routerLink]="['/directory']">Directory</a></li>
     </ul>
   </nav>
 </header>
+
+<section id="main">
+  <router-outlet></router-outlet>
+</section>
+
+
+
+
+
+
+
 
 <!-- Custom Property binding @input -->
 <!-- We give it a custom name, in this case we called it kellem and gave it a value of kellem -->
@@ -20,5 +31,4 @@
 
 <!-- next steps: go to the app.components.ts to look at the yell function -->
 <!-- <app-home [kellem]="kellem" (onYell)="yell($event)">Hello there</app-home> -->
-<router-outlet></router-outlet>
 <!-- Custom Property binding -->
