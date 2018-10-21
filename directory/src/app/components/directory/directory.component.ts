@@ -16,5 +16,5 @@ export class DirectoryComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }
