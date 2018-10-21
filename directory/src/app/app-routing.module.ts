@@ -5,7 +5,7 @@ import { DirectoryComponent } from './components/directory/directory.component';
 
 const routes: Routes = [
   {path: 'directory', component: DirectoryComponent},
-  {path: 'directory/:id', component: DirectoryComponent},
+  // {path: 'directory/:id', component: DirectoryComponent},
   {path: "", component:HomeComponent}
 ];
 

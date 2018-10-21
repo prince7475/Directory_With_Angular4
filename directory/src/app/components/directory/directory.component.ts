@@ -7,10 +7,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
+  // classes = {'blue': false, 'red': true,'underline':false }
+  // test = true
+  // id: String
 
-  id: String
+  students = [
+    {name: "prince", favColor: "yellow"},
+    {name: "Mike", favColor: "blue"},
+    {name: "Aaron", favColor: "green"},
+    {name: "Seth", favColor: "pink"}
+  ]
+
   constructor(private route: ActivatedRoute) {
-    this.id = route.snapshot.params['id'];
+    // this.id = route.snapshot.params['id'];
   
   }
 
