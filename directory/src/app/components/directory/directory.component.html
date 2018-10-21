@@ -2,13 +2,18 @@
 
 <h2>Student Listing</h2>
 
+<form  id="filter">
+  <label for="">Filter Student by name:</label>
+  <input type="text" [(ngModel)]="terms">
+</form>
+
 <ul id="ninja-listing">
-  <li *ngFor="let student of students">
+  <li *ngFor="let student of students | filter:terms">
     <div class="single-ninja">
       <span [ngStyle]="{background: student.favColor}">{{student.favColor }} is his favColor
       </span>
 
-    <h3>{{student.name | uppercase | slice:1:3 }}</h3>
+    <h3>{{student.name | filter}}</h3>
     </div>
   </li>
 </ul>
