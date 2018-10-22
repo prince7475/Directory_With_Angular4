@@ -14,9 +14,24 @@
       </span>
 
     <h3>{{student.name | filter}}</h3>
+    <button (click)="removeIt(student.name)">Remove</button>
     </div>
   </li>
 </ul>
+
+<form>
+  <div>
+    <label for="">Enter name</label>
+    <input type="text" name="name" [(ngModel)]='name'>
+  </div>
+  <div>
+    <label for="">Enter color</label>
+    <input type="text" name="color" [(ngModel)] ='color'>
+  </div>
+
+  <button (click)="logIt()">Log me</button>
+</form>
+
 
 
 <style>

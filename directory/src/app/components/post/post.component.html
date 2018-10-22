@@ -1,0 +1,30 @@
+<h2>All Posts</h2>
+
+<form  id="filter">
+  <div>
+    <label for="">Filter Post by Number:</label>
+    <input type="text" [(ngModel)]="terms" name="terms">
+  </div>
+</form>
+
+<form  id="filter">
+  <div>
+      <label for="">Filter by Post</label>
+      <input type="text" [(ngModel)]="termsPost" name="termsPost">
+  </div>
+</form>
+  
+<div *ngFor="let post of allPost | postFilter :termsPost | idFilter : terms" >
+  <ul id="ninja-listing">
+      <li>
+        <div class="single-ninja">
+          <p>Number: {{post.id | idFilter}}</p>
+          <h3>Title: {{post.title}} </h3>
+          <p>Post: {{post.body | postFilter}}</p>
+          <p>By User: {{post.userId}}</p>
+        <button>Remove</button>
+        </div>
+      </li>
+    </ul>
+</div>
+

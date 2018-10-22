@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
+ 
 
 
-
-
+ 
 
 
 
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   //   age: 20
   // }
 
-  // Custom Property binding 
+  // Custom Property binding   
   // This is getting the input we passed in 
   // for us to use @input we must import if from @angular/core
   // next go to home.component.html to see how we use this.
