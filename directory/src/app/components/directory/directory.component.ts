@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoggingService } from '../../logging.service';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
-  providers: [LoggingService]
+  providers: [LoggingService,DataService]
 
 })
 export class DirectoryComponent implements OnInit {
@@ -17,6 +18,7 @@ export class DirectoryComponent implements OnInit {
   name:string;
   color:string
   students:any;
+  Data:any;
 
   constructor(private route: ActivatedRoute, private logger:LoggingService) {
     // this.id = route.snapshot.params['id'];
@@ -36,5 +38,5 @@ export class DirectoryComponent implements OnInit {
     let result = this.logger.remove(name)
     this.students = result
   }
- 
+
 }
