@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FilterPipe } from '../../filter.pipe';
+import { LoggingService } from '../../logging.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
+  providers: [LoggingService]
 
 })
 export class DirectoryComponent implements OnInit {
@@ -13,19 +14,27 @@ export class DirectoryComponent implements OnInit {
   // test = true
   // id: String
   terms:any;
-  students = [
-    {name: "prince", favColor: "yellow"},
-    {name: "Mike", favColor: "blue"},
-    {name: "Aaron", favColor: "green"},
-    {name: "Seth", favColor: "pink"}
-  ]
+  name:string;
+  color:string
+  students:any;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private logger:LoggingService) {
     // this.id = route.snapshot.params['id'];
-  
+  }
+  ngOnInit() {
+    this.students = this.logger.students
   }
 
-  ngOnInit() {
+  logIt(){
+    this.logger.log(this.name,this.color)
+    this.name = ""
+    this.color = ""
+  }
+
+  removeIt(name){
+    console.log(name)
+    let result = this.logger.remove(name)
+    this.students = result
   }
  
 }
